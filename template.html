@@ -153,7 +153,8 @@ column-rule-style: solid;
 -webkit-column-rule-color: black;
 -moz-column-rule-color: black;
 column-rule-color: black;
--webkit-column-gap: 50%;
+/* we need a gap of exactly or more than the main-width between column 1 and column 2 = >33.33% */
+-webkit-column-gap: 34%;
 background-color: $if(body_bgcol)$$body_bgcol$$else$#ffffff$endif$;
 font-family: $if(font_family)$$font_family$$else$Rasa$endif$;
 color: $if(body_textcol)$$body_textcol$$else$#000000$endif$;
@@ -219,7 +220,7 @@ text-align: left;
 width: calc($if(poster_width)$$poster_width$$else$46in$endif$ / 3);
 height: $if(poster_height)$$poster_height$$else$32in$endif$;
 position: absolute;
-margin-left: calc($if(poster_width)$$poster_width$$else$46in$endif$ / 2);
+margin-left: calc($if(poster_width)$$poster_width$$else$46in$endif$ / 3);
 background-color: $if(primary_colour)$$primary_colour$$else$#0b4545$endif$;
 color: $if(main_textcol)$$main_textcol$$else$#FFFFFF90$endif$;
 font-family: $if(main_fontfamily)$$main_fontfamily$$else$Special Elite$endif$;
@@ -245,6 +246,12 @@ img.main-img-right {
 width: $if(mainimage_rightsize)$$mainimage_rightsize$$else$18%$endif$;
 right: 0.5in;
 bottom: 0.2in;
+position: absolute;
+}
+img.main-img-mid {
+width: $if(mainimage_midsize)$$mainimage_midsize$$else$20%$endif$;
+right: 40%;
+bottom: 20%;
 position: absolute;
 }
 .main p {
@@ -295,7 +302,7 @@ span > #tab:mytable {
   margin-right: auto;
 }
 .orcid img {
-  width: 3%;
+  width: 1.5%;
 }
 </style>
 </head>
