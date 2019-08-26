@@ -68,13 +68,30 @@ knitr::include_graphics("~/CYposters/CYT_posterdown/images/CimmunisEM.jpg")
 - Disease models of Dextran Sodium Sulfate (DSS) colitis and Experimental Autoimmune Encephalitis (EAE) were performed as described in the literature.
 - Gnotobiotic mice were orally gavaged with cultured _C.immunis_. Bacterial abundance in intestine and feces was assessed with qPCR. Intestinal immune cell profiling was done with FACS.
 - Transformation of _C.immunis_ with ClosTron plasmids are performed by either conjugation or electrotransformation.
+
 ### Results
 #### Oral gavage of _C. immunis_ into two distinct mouse models of inflammatory disease mitigates clinical severity
 
 #### _C. immunis_ is localized to the cecum and proximal-middle colon
 
-```{r echo=FALSE, out.width = "60%", fig.cap = "Intestinal segments and feces from gnotobiotic Swiss-Webster mice colonized with mouse microbiota (MMb) or human microbiota (HMb) were analyzed with qPCR using species-specific primers. \\label{figurelabel}"}
-knitr::include_graphics("~/CYposters/CYT_posterdown/images/Localization.jpg")
+```{r}
+loc=read.csv("~/CYposters/CYT_posterdown/data/HMb_Rdata.csv", sep="," , header=TRUE)
+loc$Region <- factor(loc$Region, levels=c("Duo", "Jej", "Ile", "Cec", "Prox Col", "Mid Col", "Dist Col", "Feces"))
+library("ggplot2")
+localization<-ggplot(data=loc, mapping = aes (x=Region, y=Percent)) + geom_boxplot(
+  fill="white"
+) +geom_dotplot(
+    binaxis = "y", stackdir = "center",
+    fill = "black"
+    ) + labs(title="Clostridium immunis abundance along \nintestinal tract", x= "Intestinal Region",y = "% of all bacteria") 
+localization_theme <- theme(
+  plot.title = element_text(family = "Helvetica", face = "bold", size = (20), hjust = 0.5), 
+  axis.title.x = element_text(family = "Helvetica", size = (15), colour = "black", margin = margin(10,0,0,0)),
+  axis.title.y = element_text(family = "Helvetica", size = (15), colour = "black", margin = margin(0,10,0,0)),
+                              axis.text.x = element_text(family= "Helvetica", size = (12), colour = "black"),
+                              axis.text.y = element_text(family= "Helvetica", size = (12), colour = "black"))
+print(localization + localization_theme)
+
 ```
 
 #### Colonization of the naive mouse gut by _C. immunis_ is short-lived 
