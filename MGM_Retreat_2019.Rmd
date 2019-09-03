@@ -1,5 +1,5 @@
 ---
-title: "_**Clostridium immunis**_: <br/> A human commensal with therapeutic immunomodulatory effects"
+title: "_**Clostridium immunis**_: <br/> A human gut commensal with therapeutic immunomodulatory effects"
 title_textsize: "80pt"
 author:
   - name: Chin Yee Tan
@@ -55,7 +55,7 @@ knitr::opts_chunk$set(
 - Identification of a single taxon or small consortia of taxa that promote human health will spur development of probiotic drugs for a range of diseases.
 - Host-microbe triangulation pioneered by Surana and Kasper (2017) identified a hitherto unknown taxon of bacteria strongly associated with a protective phenotype in mouse colitis; subsequent culture and characterization led to the discovery of a new species, designated _**Clostridium immunis**_.<br/>
 
-```{r echo=FALSE, out.width = "30%", fig.cap = "The first image of _C.immunis_ captured by Transmission Electron Microscopy. \\label{figurelabel}"}
+```{r echo=FALSE, out.width = "20%", fig.cap = "The first image of _C.immunis_ captured by Transmission Electron Microscopy. \\label{figurelabel}"}
 knitr::include_graphics("~/CYposters/CYT_posterdown/images/CimmunisEM.jpg")
 ```
 
@@ -63,15 +63,20 @@ knitr::include_graphics("~/CYposters/CYT_posterdown/images/CimmunisEM.jpg")
 - Immunomodulatory effects of _C.immunis_ were assessed using classical disease models with robust phenotypic readout.
 - Finding out the 'where' and 'when' of _C.immunis_ colonization will educate the search for mechanistic clues.
 - Genetic manipulation of _C.immunis_ is critical to identify genetically-encoded functions of its effects.
-
+<!---
 ### Method
 - Disease models of Dextran Sodium Sulfate (DSS) colitis and Experimental Autoimmune Encephalitis (EAE) were performed as described in the literature.
 - Gnotobiotic mice were orally gavaged with cultured _C.immunis_. Bacterial abundance in intestine and feces was assessed with qPCR. Intestinal immune cell profiling was done with FACS.
 - Transformation of _C.immunis_ with ClosTron plasmids are performed by either conjugation or electrotransformation.
 
+---->
+
 ### Results
 #### Oral gavage of _C. immunis_ into two distinct mouse models of inflammatory disease mitigates clinical severity
 
+```{r fig.show = "hold", out.width = "35%", fig.align = "center", echo=FALSE, fig.cap = "C. immunis gavage ameliorates lethality in DSS colitis (left) and clinical severity in experimental autoimmune encephalitis (right). \\label{figurelabel}"}
+knitr::include_graphics(c("~/CYposters/CYT_posterdown/images/Survival.jpg", "~/CYposters/CYT_posterdown/images/EAE.jpg"))
+```
 #### _C. immunis_ is localized to the cecum and proximal-middle colon
 
 ```{r}
@@ -83,16 +88,21 @@ localization<-ggplot(data=loc, mapping = aes (x=Region, y=Percent)) + geom_boxpl
 ) +geom_dotplot(
     binaxis = "y", stackdir = "center",
     fill = "black"
-    ) + labs(title="Clostridium immunis abundance along \nintestinal tract", x= "Intestinal Region",y = "% of all bacteria") 
+    ) + labs(title="Clostridium immunis abundance along \nintestinal tract", x= "Intestinal Region",y = "% of all bacteria",
+             caption = "Intestinal Segments and feces from gnotobiotic Swiss-Webster mice colonized with human microbiota were analyzed with C. immunis specific primers by qPCR") 
 localization_theme <- theme(
-  plot.title = element_text(family = "Helvetica", face = "bold", size = (20), hjust = 0.5), 
+  plot.title = element_text(family = "Helvetica", face = "bold", size = (20), hjust = 0.5),
+  plot.caption = element_text(hjust = 0),
   axis.title.x = element_text(family = "Helvetica", size = (15), colour = "black", margin = margin(10,0,0,0)),
   axis.title.y = element_text(family = "Helvetica", size = (15), colour = "black", margin = margin(0,10,0,0)),
                               axis.text.x = element_text(family= "Helvetica", size = (12), colour = "black"),
                               axis.text.y = element_text(family= "Helvetica", size = (12), colour = "black"))
 print(localization + localization_theme)
-
 ```
+
+<!---
+How do i have auto figure captioning with in-line R script? If not can I just write code to generate figure with ggplot, export and reimport with include_graphics? Also wish to facet both localization and kinetics side-by side
+--->
 
 #### Colonization of the naive mouse gut by _C. immunis_ is short-lived 
 
