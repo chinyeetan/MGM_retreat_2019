@@ -55,7 +55,7 @@ knitr::opts_chunk$set(
 - Identification of a single taxon or small consortia of taxa that promote human health will spur development of probiotic drugs for a range of diseases.
 - Host-microbe triangulation pioneered by Surana and Kasper (2017) identified a hitherto unknown taxon of bacteria strongly associated with a protective phenotype in mouse colitis; subsequent culture and characterization led to the discovery of a new species, designated _**Clostridium immunis**_.<br/>
 
-```{r echo=FALSE, out.width = "20%", fig.cap = "The first image of _C.immunis_ captured by Transmission Electron Microscopy. \\label{figurelabel}"}
+```{r echo=FALSE, out.width = "20%", fig.cap = "The first image of C.immunis captured by Transmission Electron Microscopy. \\label{figurelabel}"}
 knitr::include_graphics("~/CYposters/CYT_posterdown/images/CimmunisEM.jpg")
 ```
 
@@ -72,34 +72,15 @@ knitr::include_graphics("~/CYposters/CYT_posterdown/images/CimmunisEM.jpg")
 ---->
 
 ### Results
-#### Oral gavage of _C. immunis_ into two distinct mouse models of inflammatory disease mitigates clinical severity
+#### Oral administration of _C. immunis_ mitigates clinical severity in two distinct mouse models of inflammatory disease
 
-```{r fig.show = "hold", out.width = "35%", fig.align = "center", echo=FALSE, fig.cap = "C. immunis gavage ameliorates lethality in DSS colitis (left) and clinical severity in experimental autoimmune encephalitis (right). \\label{figurelabel}"}
+```{r fig.show = "hold", out.width = "30%", fig.align = "center", echo=FALSE, fig.cap = "C. immunis gavage ameliorates lethality in DSS colitis (L) and clinical severity in experimental autoimmune encephalitis (R). \\label{figurelabel}"}
 knitr::include_graphics(c("~/CYposters/CYT_posterdown/images/Survival.jpg", "~/CYposters/CYT_posterdown/images/EAE.jpg"))
 ```
 #### _C. immunis_ is localized to the cecum and proximal-middle colon
-
-```{r}
-loc=read.csv("~/CYposters/CYT_posterdown/data/HMb_Rdata.csv", sep="," , header=TRUE)
-loc$Region <- factor(loc$Region, levels=c("Duo", "Jej", "Ile", "Cec", "Prox Col", "Mid Col", "Dist Col", "Feces"))
-library("ggplot2")
-localization<-ggplot(data=loc, mapping = aes (x=Region, y=Percent)) + geom_boxplot(
-  fill="white"
-) +geom_dotplot(
-    binaxis = "y", stackdir = "center",
-    fill = "black"
-    ) + labs(title="Clostridium immunis abundance along \nintestinal tract", x= "Intestinal Region",y = "% of all bacteria",
-             caption = "Intestinal Segments and feces from gnotobiotic Swiss-Webster mice colonized with human microbiota were analyzed with C. immunis specific primers by qPCR") 
-localization_theme <- theme(
-  plot.title = element_text(family = "Helvetica", face = "bold", size = (20), hjust = 0.5),
-  plot.caption = element_text(hjust = 0),
-  axis.title.x = element_text(family = "Helvetica", size = (15), colour = "black", margin = margin(10,0,0,0)),
-  axis.title.y = element_text(family = "Helvetica", size = (15), colour = "black", margin = margin(0,10,0,0)),
-                              axis.text.x = element_text(family= "Helvetica", size = (12), colour = "black"),
-                              axis.text.y = element_text(family= "Helvetica", size = (12), colour = "black"))
-print(localization + localization_theme)
+```{r echo=FALSE, out.width = "40%", fig.cap = "C. immunis is predominantly cecal and proximal colonic at steady-state \\label{figurelabel}"}
+knitr::include_graphics("~/CYposters/CYT_posterdown/images/Immunis only-HMb.jpg")
 ```
-
 <!---
 How do i have auto figure captioning with in-line R script? If not can I just write code to generate figure with ggplot, export and reimport with include_graphics? Also wish to facet both localization and kinetics side-by side
 --->
