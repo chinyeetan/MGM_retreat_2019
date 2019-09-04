@@ -23,13 +23,13 @@ affiliation:
   - num: 4
     address: Duke-NUS Medical School
 main_findings:
-  - "**Therapeutic Potential:**<br/>Oral administration of _Clostridium immunis_ to mice ameliorates colitis and autoimmune encephalitis severity<br/><br/>**Localization and Colonization:** _Clostridium immunis_ localizes to the mouse cecum and proximal colon and displays short term kinetics upon single gavage<br/><br/>**Immunomodulatory Effects:** _Clostridium immunis_ modulates the intestinal type 3 innate lymphoid cell (ILC3) population"
+  - "**Impact:**<br/>Oral administration of _Clostridium immunis_ to mice ameliorates inflammatory disease<br/><br/>**Mechanism:**</br>_Clostridium immunis_ downregulates the intestinal type 3 innate lymphoid cell (ILC3) population</br></br>**Ongoing work:**</br>a) Reverse genetics to identify bioactive products of _C. immunis_</br>b) ILC3 knockout mouse model and immune profiling to identify and illuminate host responses to _C. immunis_"
 main_textsize: "60pt"
 main_fontfamily: "Palatino"
 main_textcolour: "#ffffff90"
 column_padding: "10mm"
 body_textsize: "38px"
-logoleft_name: "![](~/CYposters/CYT_posterdown/images/QR.jpg){.main-img-mid}" 
+logoleft_name: "![](~/CYposters/CYT_posterdown/images/QR-git-new.png){.main-img-mid}" 
 mainimage_midsize: "20%"
 output: 
   posterdown::posterdown_betterland:
