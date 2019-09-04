@@ -1,6 +1,6 @@
 ---
 title: "_**Clostridium immunis**_: <br/> A human gut commensal with therapeutic immunomodulatory effects"
-title_textsize: "80pt"
+title_textsize: "75pt"
 author:
   - name: Chin Yee Tan
     affil: 2, 4
@@ -12,7 +12,7 @@ author:
     email: neil.surana@duke.edu
     orcid: 0000-0002-9544-2551
     main: true
-author_textsize: "24pt"
+author_textsize: "22pt"
 affiliation:
   - num: 1
     address: Department of Pediatrics, Duke University
@@ -28,7 +28,7 @@ main_textsize: "60pt"
 main_fontfamily: "Palatino"
 main_textcolour: "#ffffff90"
 column_padding: "10mm"
-body_textsize: "40px"
+body_textsize: "38px"
 logoleft_name: "![](~/CYposters/CYT_posterdown/images/QR.jpg){.main-img-mid}" 
 mainimage_midsize: "20%"
 output: 
@@ -39,7 +39,7 @@ output:
     number_sections: false
     template: template.html
 link-citations: true
-bibliography: posterbib.bib
+bibliography: MGMposter_citations.bib
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(
@@ -52,62 +52,49 @@ knitr::opts_chunk$set(
 )
 ```
 ### Introduction
-- The modulation of our microbiome is an attractive method to abrogate disease and promote health [1], but this has been an onerous venture
-- Components of the host microbiome are known to regulate host immunity, revealing autoimmune and inflammtory diseases as a potential entry point for microbiome therapy  [2]
-- Identification of a single taxon or small consortia of taxa that promote human health will spur development of probiotic drugs for a range of diseases [3].
-- Host-microbe triangulation pioneered by Surana and Kasper [4] identified a hitherto unknown taxon of bacteria strongly associated with a protective phenotype in mouse colitis; subsequent culture and characterization led to the discovery of a new species, designated _**Clostridium immunis**_.
+- The modulation of our microbiome is an attractive method to promote health and abrogate disease [@RN2], but this has been an onerous venture given the staggering complexity in pinpointing consortia or individual species that **causally** impact host health from a laundry list of taxa merely **associated** with disease states [@RN4].
+- Members of the host microbiota are known to regulate host immunity [@RN3], illuminating a potential entry point for microbiome therapy in autoimmune and inflammtory diseases.
+- **A technique we use in the Surana lab**: "Host-microbe triangulation" [@RN1] had identified a hitherto unknown taxon of bacteria strongly associated with a protective phenotype in mouse colitis; subsequent characterization led to the discovery of a new species, designated _**Clostridium immunis**_.
 
-```{r echo=FALSE, out.width = "30%", fig.cap = "The first image of C.immunis captured by Transmission Electron Microscopy. \\label{figurelabel}"}
+```{r echo=FALSE, out.width = "20%", fig.cap = "The first image of C. immunis captured by Transmission Electron Microscopy. \\label{figurelabel}"}
 knitr::include_graphics("~/CYposters/CYT_posterdown/images/CimmunisEM.jpg")
 ```
 
 ### Approach
-- Immunomodulatory effects of _C.immunis_ were assessed using classical disease models with robust phenotypic readout.
-- Finding out the 'where' and 'when' of _C.immunis_ colonization will educate the search for mechanistic clues.
-- Genetic manipulation of _C.immunis_ is critical to identify genetically-encoded functions of its effects.
+- Immunomodulatory effects of _C. immunis_ were assessed using classical disease models with robust phenotypic readout.
+- Finding out the 'where' and 'when' of _C. immunis_ colonization will educate the search for mechanistic clues.
+- Genetic manipulation of _C. immunis_ is critical to identify genetically-encoded functions of its effects.
 <!---
 ### Method
 - Disease models of Dextran Sodium Sulfate (DSS) colitis and Experimental Autoimmune Encephalitis (EAE) were performed as described in the literature.
-- Gnotobiotic mice were orally gavaged with cultured _C.immunis_. Bacterial abundance in intestine and feces was assessed with quantitative PCR (qPCR). Intestinal immune cell profiling was done with fluorescence activated cell sorting.
+- Gnotobiotic mice were orally gavaged with cultured _C. immunis_. Bacterial abundance in intestine and feces was assessed with quantitative PCR (qPCR). Intestinal immune cell profiling was done with fluorescence activated cell sorting.
 -->
 
 ### Results
 #### Single oral administration of _C. immunis_ mitigates clinical severity in two distinct mouse models of inflammatory disease
-```{r fig.show = "hold", out.width = "40%", fig.align = "center", echo=FALSE, fig.cap = " (Left) C. immunis gavage ameliorates lethality in DSS colitis and (Right) clinical severity in experimental autoimmune encephalitis. n=5 mice per group (DSS colitis); n=10 mice per group (EAE); Single dose of C.immunis preadministered before disease induction. *=p<0.05 \\label{figurelabel}"}
-knitr::include_graphics(c("~/CYposters/CYT_posterdown/images/Survival.jpg", "~/CYposters/CYT_posterdown/images/EAE.jpg"))
+```{r fig.show = "hold", out.width = "43%", fig.align = "center", echo=FALSE, fig.cap = " (Left) Oral gavage of C. immunis ameliorates lethality in DSS colitis and (Right) clinical severity in experimental autoimmune encephalitis. n=5 mice per group (DSS colitis); n=10 mice per group (EAE); Single dose of C. immunis preadministered before disease induction. *=p<0.05 \\label{figurelabel}"}
+knitr::include_graphics(c("~/CYposters/CYT_posterdown/images/Survival-new.jpg", "~/CYposters/CYT_posterdown/images/EAE-new.jpg"))
 ```
-#### _C. immunis_ is localized to the cecum and proximal-middle colon; Presence of the _C. immunis_ in the naïve mouse gut after a single oral gavage is short-lived 
-```{r fig.show = "hold", out.width = "40%", fig.align = "center", echo=FALSE, fig.cap = " (Left) C. immunis is mostly localized to the cecum and proximal-mid colon in colonized mice at steady-state, n=4 mice; (Right) C.immunis naïve C57BL/6 MMb do not retain C.immunis beyond 24hours after single oral gavage, n=9 mice; fecal pellets collected 12-hourly \\label{figurelabel}"}
+#### _C. immunis_ is localized to the cecum and proximal-middle colon; Presence of the _C.  immunis_ in the naïve mouse gut after a single oral gavage is short-lived 
+```{r fig.show = "hold", out.width = "45%", fig.align = "center", echo=FALSE, fig.cap = " (Left) C. immunis is mostly localized to the cecum and proximal-mid colon in colonized mice at steady-state, n=4 mice; (Right) C. immunis naïve C57BL/6 MMb do not retain C. immunis beyond 24hours after single oral gavage, n=9 mice; fecal pellets collected 12-hourly \\label{figurelabel}"}
 knitr::include_graphics(c("~/CYposters/CYT_posterdown/images/Immunis only-HMb.jpg","~/CYposters/CYT_posterdown/images/Kinetics.jpg"))
 ```
 <!---
 How do i have auto figure captioning with in-line R script? If not can I just write code to generate figure with ggplot, export and reimport with include_graphics? Also wish to facet both localization and kinetics side-by side
 Edit: Decided to import PRISM made files for now for simplicity. Older commits have the code for plotting localization from raw data
 --->
-#### Oral administration of a _C.immunis_ enrichced culture decreases the abundance of colonic Type 3 innate lymphoid cells (ILC3)
-```{r echo=FALSE, out.width = "40%", fig.cap = "Colonic type 3 innate lymphoid cells were decreased in mice gavaged with a culture enriched for C.immunis (HMb cx) compared to a culture low in C.immunis (MMb cx). **=p<0.005 \\label{figurelabel}"}
+#### Oral administration of a _C. immunis_ enrichced culture decreases the abundance of colonic Type 3 innate lymphoid cells (ILC3)
+```{r echo=FALSE, out.width = "45%", fig.cap = "Colonic type 3 innate lymphoid cells were decreased in mice gavaged with a culture enriched for C. immunis (HMb cx) compared to a culture low in C. immunis (MMb cx). **=p<0.005 \\label{figurelabel}"}
 knitr::include_graphics("~/CYposters/CYT_posterdown/images/NKp46+ILC3s.jpg")
 ```
 ### Ongoing work
-#### Comparative Genomics and Genetic Manipulation
-- I am performing whole genome comparative genomics between  of closely related strains and _C.immunis_ to identify candidate genes that confer protection
-- The lab is testing techniques to introduce exogenous genetic material into _C.immunis_, with the aim to performing CRISPR-mediated gene knockouts against candidate genes
+#### Bacterial end: Comparative genomics and genetic manipulation of _C. immunis_ to unveil bacterial products that induce protection
+- I am performing whole genome comparisons between closely related strains and _C. immunis_ to identify candidate genes that confer protection.
+- The lab is testing techniques to introduce exogenous genetic material into _C. immunis_, with the aim to performing CRISPR-mediated gene knockouts against candidate genes.
 
-#### Detailed mechanistic studies: ILC3 knockout mouse
-- I am currently breeding ILC3 knockout mice to confirm and study the mechanism of _C.immunis_ modulation of the host colonic ILC3 population
+#### Host end: Unravelling changes to host immunological status mediated by _C. immunis_
+- I am currently generating ILC3 knockout mice to confirm and study the mechanism of _C. immunis_ modulation of the host colonic ILC3 population.
 
-##### References & Acknowledgements
-<span style = "font-size: 25px">
-1. Mimee, M., et al. (2016). "Microbiome therapeutics — Advances and challenges." Advanced Drug Delivery Reviews 105: 44-54. </br>
-2. Blander, J. M., et al. (2017). "Regulation of inflammation by microbiota interactions with the host." Nature Immunology 18: 851. </br>
-3. Fischbach, M. A. (2018). "Microbiome: Focus on Causation and Mechanism." Cell 174(4): 785-790.</br>
-4. Surana, N. K. and D. L. Kasper (2017). "Moving beyond microbiome-wide associations to causal microbe identification." Nature 552: 244 </br></br>
-We are thankful to the Duke Gnotobiotic Core (gnotobiotic animal husbandry), the microbiome core (use of anaerobic chamber) and the Shinohara lab (advice on EAE induction).
-</span>
-<!---
-[Neil's original paper]
-[Review paper on search for commensal organisms with immunomodulatory potential]
-[posterdown citation]
-Thanks to gnotobiotic core, microbiome core and shinohara lab
-
---->
+### Acknowledgements and References
+- We are thankful to the Duke Gnotobiotic Core, Microbiome Core, Breeding Core and the Shinohara lab for their support of this work
+- This poster was inspired by Mike Morrison's better poster and produced by the posterdown package [@R-posterdown] 
