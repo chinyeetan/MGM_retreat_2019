@@ -74,13 +74,13 @@ knitr::include_graphics("~/CYposters/CYT_posterdown/images/CimmunisEM.jpg")
 
 ### Results
 #### Oral administration of _C. immunis_ mitigates clinical severity in two distinct mouse models of inflammatory disease
-```{r out.width = "95%", fig.align = "center", echo=FALSE, fig.cap = "Oral gavage of _C. immunis_ ameliorates (A) lethality in DSS colitis, and (B) clinical severity in experimental autoimmune encephalitis. n=5 mice per group (DSS colitis); n=10 mice per group (EAE); *=p<0.05 \\label{figurelabel}"}
+```{r out.width = "95%", fig.align = "center", echo=FALSE, fig.cap = "Oral gavage of _C. immunis_ reduces (A) lethality in DSS colitis, and (B) clinical severity in experimental autoimmune encephalitis. n=5 mice per group (DSS colitis); n=10 mice per group (EAE); *=p<0.05 \\label{figurelabel}"}
 knitr::include_graphics("~/CYposters/CYT_posterdown/images/Fig1.jpg")
 ```
 </br>
 
 #### _C. immunis_ is localized to the cecum and proximal-middle colon;</br>Presence of _C.  immunis_ in the naïve mouse gut is short-lived 
-```{r out.width = "80%", fig.align = "center", echo=FALSE, fig.cap = "(A) _C. immunis_ is localized to the cecum and proximal-mid colon in colonized mice at steady-state (HMb); n=4 mice (B) _C. immunis_ naïve MMb mice do not retain _C. immunis_ beyond 24 hours after single oral gavage; n=9 mice\\label{figurelabel}"}
+```{r out.width = "75%", fig.align = "center", echo=FALSE, fig.cap = "(A) _C. immunis_ is localized to the cecum and proximal-mid colon in colonized mice at steady-state (HMb); n=4 mice (B) _C. immunis_ naïve MMb mice do not retain _C. immunis_ beyond 24 hours after single oral gavage; n=9 mice\\label{figurelabel}"}
 knitr::include_graphics("~/CYposters/CYT_posterdown/images/Fig2.jpg")
 ```
 
@@ -99,5 +99,5 @@ knitr::include_graphics("~/CYposters/CYT_posterdown/images/CG.jpg")
 - I am currently generating ILC3 knockout mice to confirm and study the mechanism of _C. immunis_ modulation of the host colonic ILC3 population.
 
 ### Acknowledgements and References
-- We are grateful to the Duke Gnotobiotic, Microbiome and Breeding Core facilities, and the Shinohara lab for their support of this work
-- This poster was inspired by Mike Morrison's better poster and produced by the posterdown package [@R-posterdown] 
+- We are grateful to the Duke Gnotobiotic, Microbiome and Breeding Core facilities, and the Shinohara lab for their support of this work.
+- This poster was inspired by Mike Morrison's better poster and produced by the posterdown package [@R-posterdown].
